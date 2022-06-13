@@ -3,6 +3,7 @@ import "./Header.scss";
 import { motion } from "framer-motion";
 import { images } from "../../constants/index";
 import { AppWrap } from "../../wrapper/index";
+import { SocialMedia } from "../../components";
 
 const scaleVariants = {
   whileInView: {
@@ -28,13 +29,14 @@ const Header = () => {
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hello, I am </p>
-              <h1 className="head-text">Kushagra</h1>
+              <h1 className="head-text">Kushagra Mathur</h1>
             </div>
           </div>
           <div className="tag-cmp app__flex">
             <p className="p-text">Web Developer</p>
-            <p className="p-text">Freelancer</p>
+            <p className="p-text">Video Editor</p>
           </div>
+          <SocialMedia />
         </div>
       </motion.div>
 

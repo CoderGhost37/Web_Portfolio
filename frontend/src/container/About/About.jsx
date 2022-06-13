@@ -16,12 +16,46 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-        I know that
-        <span> Good Design</span>
-        <br />
-        means
-        <span> Good Business</span>
+        About
+        <span> Me</span>
       </h2>
+
+      <div className="app__aboutme">
+        <div className="app__aboutme-left">
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ duration: 0.5, delayChildren: 0.5 }}
+            className="app__aboutme-img"
+          >
+            <img src="./about02.png" alt="profile_bg" />
+          </motion.div>
+        </div>
+        <div className="app__aboutme-right">
+          <p>
+            Hey! My name is Kushagra. I am a web developer located in India. I
+            build interactive websites that run across various platforms and
+            have great user experience.
+          </p>
+          <br />
+          <p>
+            I am an extremely curious and self-motivated individual with a huge
+            passion for design in general. I take a very positive and ego-free
+            approach to all aspects of my life, and I carry a strong work ethic
+            with me wherever I go.
+          </p>
+          <br />
+          <p>
+            Being a diligent, hardworking and result oriented guy, I always work
+            towards achieving best result on each project I lay my hands on.
+          </p>
+          <br />
+          <p>
+            In the quest for always keeping myself updated, I read books and
+            attend conferences. Well organised person, problem solver with high
+            attention to detail.
+          </p>
+        </div>
+      </div>
 
       <div className="app__profiles">
         {abouts.map((about, index) => (
@@ -40,7 +74,7 @@ const About = () => {
           </motion.div>
         ))}
       </div>
-    </> 
+    </>
   );
 };
 

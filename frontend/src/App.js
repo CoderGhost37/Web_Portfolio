@@ -1,7 +1,7 @@
 import './App.scss';
-
 import { About, Contact, Header, Skills, Testimonial, Work } from './container/index';
 import { Navbar } from './components/index';
+import Footer from './container/Footer/Footer';
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
       <Work />
       {/* <Testimonial /> */}
       <Contact />
+      <Footer />
     </h1>
   );
 }

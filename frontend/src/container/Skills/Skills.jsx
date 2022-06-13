@@ -48,11 +48,11 @@ const Skills = () => {
         </motion.div>
 
         <motion.div className="app__skills-exp">
-          <p>Work Exp will come here.</p>
+          {experience.length===0 && <p>Work Exp will come here.</p>}
           {experience?.map((experience) => (
             <motion.div className="app__skills-exp-item" key={experience.year}>
               <div className="app_skills-exp-year">
-                <p className="bold-text">{experience.year}</p>
+                <p className="bold-text">{experience.year} &nbsp;</p>
               </div>
               <motion.div className="app__skills-exp-works">
                 {experience?.works?.map((work) => (
@@ -60,16 +60,16 @@ const Skills = () => {
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
-                      key={work.name}
+                      key={work.post}
                       data-tip
-                      data-for={work.name}
+                      data-for={work.post}
                       className="app__skills-exp-work app__flex"
                     >
-                      <h4 className="bold-text">{work.name}</h4>
+                      <h4 className="bold-text">{work.post}</h4>
                       <p className="p-text">{work.company}</p>
                     </motion.div>
                     <ReactTooltip
-                      id={work.name}
+                      id={work.post}
                       effect="solid"
                       arrowColor="skills-tooltip"
                     >
